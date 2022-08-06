@@ -6,21 +6,86 @@ import Layout from "../components/Layout";
 import Header from "../components/Header";
 import team from "../public/team.svg";
 import { Zoom, Bounce } from "react-reveal";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+import {
+  BsGlobe2,
+  BsSearch,
+  BsFillPenFill,
+  BsHammer,
+  BsLaptop,
+} from "react-icons/bs";
+import {
+  IoPhonePortraitOutline,
+  IoSettingsSharp,
+  IoRocketOutline,
+} from "react-icons/io5";
+import { BiTestTube } from "react-icons/bi";
+
 const Home: NextPage = () => {
   const services = [
     {
       title: "Web Development",
       desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque minima exercitationem repellendus fuga quam laboriosam hic aut harum veniam aliquid.",
+      icon: (
+        <BsGlobe2
+          size={60}
+          className="text-white bg-gradient-to-r from-purple-600 to-pink-600 p-2 rounded-full"
+        />
+      ),
     },
     {
-      title: "App Development",
+      title: "Mobile App Development",
       desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque minima exercitationem repellendus fuga quam laboriosam hic aut harum veniam aliquid.",
+      icon: <IoPhonePortraitOutline size={60} className="text-white" />,
     },
     {
-      title: "SaaS Development",
+      title: "Desktop App Development",
       desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque minima exercitationem repellendus fuga quam laboriosam hic aut harum veniam aliquid.",
+      icon: (
+        <BsLaptop
+          size={60}
+          className="text-white bg-gradient-to-r from-orange-600 to-purple-300 p-2 rounded-full"
+        />
+      ),
     },
   ];
+  const processes = [
+    {
+      title: "Research",
+      desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque minima exercitationem repellendus fuga quam laboriosam hic aut harum veniam aliquid.",
+      icon: <BsSearch size={100} className="text-white animate-pulse" />,
+    },
+    {
+      title: "Product Design",
+      desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque minima exercitationem repellendus fuga quam laboriosam hic aut harum veniam aliquid.",
+      icon: <BsFillPenFill size={60} className="text-white animate-bounce" />,
+    },
+    {
+      title: "Implementation",
+      desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque minima exercitationem repellendus fuga quam laboriosam hic aut harum veniam aliquid.",
+      icon: <BsHammer size={60} className="text-white animate-bounce" />,
+    },
+    {
+      title: "Optimisation",
+      desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque minima exercitationem repellendus fuga quam laboriosam hic aut harum veniam aliquid.",
+      icon: <IoSettingsSharp size={60} className="text-white animate-spin" />,
+    },
+    {
+      title: "Testing",
+      desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque minima exercitationem repellendus fuga quam laboriosam hic aut harum veniam aliquid.",
+      icon: <BiTestTube size={60} className="text-white animate-bounce" />,
+    },
+    {
+      title: "Deployment and Monitoring",
+      desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque minima exercitationem repellendus fuga quam laboriosam hic aut harum veniam aliquid.",
+      icon: <IoRocketOutline size={60} className="text-white animate-bounce" />,
+    },
+  ];
+
   const router = useRouter();
   return (
     <div>
@@ -67,52 +132,68 @@ const Home: NextPage = () => {
             <Image className=" md:w-6/12 z-0" src={team} alt="illustration" />
           </div>
         </section>
-        <section className="p-6  w-full bg-white" id="About">
-          <h3 className=" text-center text-2xl text-gray-600 font-extrabold">
+        <section className="p-6  w-full bg-[#242424]" id="About">
+          <h3 className=" text-center text-4xl text-white font-extrabold mb-7">
             Services we can help you with
           </h3>
           <div className="md:flex ">
             {services.map((item, index) => (
               <Zoom key={index}>
-                <div className="bg-white shadow m-2 flex flex-col p-3 rounded-sm items-center">
-                  <h2 className="text-slate-900">{item.title}</h2>
-                  <h3 className="text-slate-900">{item.desc}</h3>
+                <div className="bg-[#1a1a1a] shadow-md rounded m-2 flex flex-col p-5 rounded-tr-3xl rounded-bl-3xl items-start">
+                  {item.icon}
+                  <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 text-3xl m-1">
+                    {item.title}
+                  </h2>
+                  <h3 className="text-white font-light text-lg">{item.desc}</h3>
                 </div>
               </Zoom>
             ))}
           </div>
-          <p className="text-center mb-10 font-light">
-            Your brand wasn’t built to be hidden. Help it stand out with branded
-            links that drive more clicks.
-          </p>
         </section>
 
         <section
-          className="w-full bg-slate-900 h-60 flex flex-col items-center justify-center"
+          className="w-full bg-[#1a1a1a] p-3 flex flex-col items-center justify-center overflow-hidden"
           id="FAQs"
         >
           <h3 className=" text-center text-4xl text-white font-extrabold mb-7">
-            More than a free link shortener
+            Our Process
           </h3>
+          <VerticalTimeline>
+            {processes.map((item, index) => (
+              <VerticalTimelineElement
+                key={index}
+                className=""
+                contentStyle={{
+                  background: "#242424",
+                  color: "#fff",
+                }}
+                contentArrowStyle={{
+                  borderRight: "10px solid  #fff",
+                }}
+                // date="2011 - present"
+                iconStyle={{
+                  background: `${
+                    // (index % 2 &&
+                    // "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%)") ||
+                    "linear-gradient(90deg, rgba(30,0,36,1) 0%, rgba(255,0,189,1) 100%)"
+                  }`,
+                  color: "#fff",
+                }}
+                icon={item.icon}
+              >
+                <h3 className="text-2xl text-white font-light">{item.title}</h3>
 
-          <button
-            onClick={() => router.push("/signup")}
-            className=" bg-primary text-white p-3 font-bold rounded-sm mr-1 border-none"
-            id="FAQs"
-          >
-            Start for free
-          </button>
+                <h4 className="font-thin text-white text-lg">{item.desc}</h4>
+              </VerticalTimelineElement>
+            ))}
+          </VerticalTimeline>
         </section>
-        <section className="p-6 w-full mb-6"></section>
-        <section className="w-full p-6  bg-slate-900 flex flex-col items-center justify-center">
-          <h3 className=" text-center text-2xl text-white font-extrabold mb-3">
-            Quick Links
-          </h3>
 
+        <section className="w-full overflow-hidden p-6  bg-[#242424] flex flex-col items-center justify-center">
           <div className="my-3 text-center">
             <p className="font-thin text-white text-sm">Privacy Policy</p>
             <p className="font-thin text-sm text-white">
-              Copyright © 2021 Solomon. All Rights Reserved.
+              Copyright © 2022 Solomon. All Rights Reserved.
             </p>
           </div>
         </section>
