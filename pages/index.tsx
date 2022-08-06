@@ -112,8 +112,8 @@ const Home: NextPage = () => {
                 Athenasoft
               </h3>
               <Bounce>
-                <h3 className="font-extrabold text-4xl md:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
-                  Technologies
+                <h3 className="font-extrabold mb-3 text-4xl md:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                  Technology
                 </h3>
               </Bounce>
               <p className="text-white font-thin text-xl mb-4">
