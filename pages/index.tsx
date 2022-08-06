@@ -40,7 +40,12 @@ const Home: NextPage = () => {
     {
       title: "Mobile App Development",
       desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque minima exercitationem repellendus fuga quam laboriosam hic aut harum veniam aliquid.",
-      icon: <IoPhonePortraitOutline size={60} className="text-white" />,
+      icon: (
+        <IoPhonePortraitOutline
+          size={60}
+          className="text-white bg-gradient-to-r from-red-400 to-pink-600 p-2 rounded-full"
+        />
+      ),
     },
     {
       title: "Desktop App Development",
@@ -48,7 +53,7 @@ const Home: NextPage = () => {
       icon: (
         <BsLaptop
           size={60}
-          className="text-white bg-gradient-to-r from-orange-600 to-purple-300 p-2 rounded-full"
+          className="text-white bg-gradient-to-r from-orange-400 to-purple-600 p-2 rounded-full"
         />
       ),
     },
@@ -57,12 +62,12 @@ const Home: NextPage = () => {
     {
       title: "Research",
       desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque minima exercitationem repellendus fuga quam laboriosam hic aut harum veniam aliquid.",
-      icon: <BsSearch size={100} className="text-white animate-pulse" />,
+      icon: <BsSearch size={100} className="text-white animate-bounce" />,
     },
     {
       title: "Product Design",
       desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque minima exercitationem repellendus fuga quam laboriosam hic aut harum veniam aliquid.",
-      icon: <BsFillPenFill size={60} className="text-white animate-bounce" />,
+      icon: <BsFillPenFill size={60} className="text-white animate-pulse" />,
     },
     {
       title: "Implementation",
@@ -77,7 +82,7 @@ const Home: NextPage = () => {
     {
       title: "Testing",
       desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque minima exercitationem repellendus fuga quam laboriosam hic aut harum veniam aliquid.",
-      icon: <BiTestTube size={60} className="text-white animate-bounce" />,
+      icon: <BiTestTube size={60} className="text-white animate-pulse" />,
     },
     {
       title: "Deployment and Monitoring",
@@ -181,7 +186,9 @@ const Home: NextPage = () => {
                 }}
                 icon={item.icon}
               >
-                <h3 className="text-2xl text-white font-light">{item.title}</h3>
+                <h3 className="text-2xl  text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                  {item.title}
+                </h3>
 
                 <h4 className="font-thin text-white text-lg">{item.desc}</h4>
               </VerticalTimelineElement>
