@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import Layout from "../components/Layout";
 import Header from "../components/Header";
 import team from "../public/team.svg";
+//@ts-ignore
 import { Zoom, Bounce } from "react-reveal";
 import {
   VerticalTimeline,
