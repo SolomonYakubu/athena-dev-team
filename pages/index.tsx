@@ -109,11 +109,11 @@ const Home: NextPage = () => {
           <div className="md:flex md:items-center md:justify-between md:w-full px-3 pt-8">
             <div className="pt-5 md:pt-0 md:w-6/12 ">
               <h3 className="font-extrabold text-4xl md:text-7xl text-white">
-                Athena
+                Athenasoft
               </h3>
               <Bounce>
                 <h3 className="font-extrabold text-4xl md:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
-                  Dev Team
+                  Technologies
                 </h3>
               </Bounce>
               <p className="text-white font-thin text-xl mb-4">
