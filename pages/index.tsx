@@ -6,6 +6,7 @@ import Layout from "../components/Layout";
 import Header from "../components/Header";
 import team from "../public/team.svg";
 import { Zoom, Bounce } from "react-reveal";
+import about from "../public/about.svg";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -112,7 +113,7 @@ const Home: NextPage = () => {
                 Athenasoft
               </h3>
               <Bounce>
-                <h3 className="font-extrabold mb-3 text-4xl md:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                <h3 className="font-extrabold pb-3 text-4xl md:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
                   Technology
                 </h3>
               </Bounce>
@@ -139,12 +140,30 @@ const Home: NextPage = () => {
         </section>
         <section className="p-6  w-full bg-[#242424]" id="About">
           <h3 className=" text-center text-4xl text-white font-extrabold mb-7">
+            About Us
+          </h3>
+          <Zoom>
+            <div className="md:flex items-center justify-center">
+              {" "}
+              <Image src={about} alt="about" />
+              <h4 className="md:w-2/3 md:text-2xl font-thin text-lg text-white text-center">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Commodi necessitatibus accusantium ullam placeat amet illo quos
+                vel cum ipsa, nisi repellat iste, iusto aliquam veritatis
+                fugiat, officia possimus nobis optio.
+              </h4>
+            </div>
+          </Zoom>
+          <div className="md:flex "></div>
+        </section>
+        <section className="p-6  w-full bg-[#1a1a1a]" id="About">
+          <h3 className=" text-center text-4xl text-white font-extrabold mb-7">
             Services we can help you with
           </h3>
           <div className="md:flex ">
             {services.map((item, index) => (
               <Zoom key={index}>
-                <div className="bg-[#1a1a1a] shadow-md rounded m-2 flex flex-col p-5 rounded-tr-3xl rounded-bl-3xl items-start">
+                <div className="bg-[#292929] shadow-lg rounded m-2 flex flex-col p-5 rounded-tr-3xl rounded-bl-3xl items-start">
                   {item.icon}
                   <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 text-3xl m-1">
                     {item.title}
@@ -157,7 +176,7 @@ const Home: NextPage = () => {
         </section>
 
         <section
-          className="w-full bg-[#1a1a1a] p-3 flex flex-col items-center justify-center overflow-hidden"
+          className="w-full bg-[#242424] p-3 flex flex-col items-center justify-center overflow-hidden"
           id="FAQs"
         >
           <h3 className=" text-center text-4xl text-white font-extrabold mb-7">
@@ -167,10 +186,10 @@ const Home: NextPage = () => {
             {processes.map((item, index) => (
               <VerticalTimelineElement
                 key={index}
-                className=""
                 contentStyle={{
-                  background: "#242424",
+                  background: "#1a1a1a",
                   color: "#fff",
+                  border: "none",
                 }}
                 contentArrowStyle={{
                   borderRight: "10px solid  #fff",
@@ -196,7 +215,7 @@ const Home: NextPage = () => {
           </VerticalTimeline>
         </section>
 
-        <section className="w-full overflow-hidden p-6  bg-[#242424] flex flex-col items-center justify-center">
+        <section className="w-full overflow-hidden p-6  bg-[#1a1a1a] flex flex-col items-center justify-center">
           <div className="my-3 text-center">
             <p className="font-thin text-white text-sm">Privacy Policy</p>
             <p className="font-thin text-sm text-white">

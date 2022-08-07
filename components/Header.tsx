@@ -5,6 +5,8 @@ import { RiMenu4Line } from "react-icons/ri";
 import { AiOutlineClose } from "react-icons/ai";
 import { GiWoodAxe } from "react-icons/gi";
 import { Link, animateScroll as scroll } from "react-scroll";
+import logo from "../public/athena.png";
+import Image from "next/image";
 export default function Header() {
   const [isNavOpen, setNavOpen] = useState(false);
 
@@ -31,10 +33,17 @@ export default function Header() {
   return (
     <div className="fixed top-0 z-20">
       <div className=" p-4 md:px-16 md:py-8 flex w-screen items-center justify-between bg-[#1a1a1a] h-16 border-b-[0.1px] border-solid border-b-slate-700">
-        <h3 className="font-[Orbitron] text-white font-bold text-4xl">
-          Athenasoft
-        </h3>
-
+        <div className="flex justify-center items-center">
+          <Image src={logo} alt="logo" height={50} width={50} />
+          <div className="flex flex-col justify-center items-start ml-3">
+            <h3 className="font-[Orbitron] text-white font-bold text-lg p-0">
+              Athenasoft
+            </h3>
+            <h3 className="font-[Orbitron] text-white font-bold text-md p-0">
+              Technology
+            </h3>
+          </div>
+        </div>
         <ul className="  md:justify-between  md:flex hidden">
           {" "}
           {list.map(([name, link], index) => (
