@@ -35,14 +35,10 @@ export default function Header() {
       <div className=" p-4 md:px-16 md:py-8 flex w-screen items-center justify-between bg-[#1a1a1a] h-16 border-b-[0.1px] border-solid border-b-slate-700">
         <div className="flex justify-center items-center">
           <Image src={logo} alt="logo" height={50} width={50} />
-          <div className="flex flex-col justify-center items-start ml-3">
-            <h3 className="font-[Orbitron] text-white font-bold text-lg p-0">
-              Athenasoft
-            </h3>
-            <h3 className="font-[Orbitron] text-white font-bold text-md p-0">
-              Technology
-            </h3>
-          </div>
+          {/* <div className="flex flex-col justify-center items-start ml-3">
+            <h3 className=" text-white font-bold text-lg p-0">Athenasoft</h3>
+            <h3 className=" text-white font-bold text-md p-0">Technology</h3>
+          </div> */}
         </div>
         <ul className="  md:justify-between  md:flex hidden">
           {" "}
