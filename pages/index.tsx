@@ -30,7 +30,7 @@ const Home: NextPage = () => {
   const services = [
     {
       title: "Web Development",
-      desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque minima exercitationem repellendus fuga quam laboriosam hic aut harum veniam aliquid.",
+      desc: "We build and design various types of web apps for your company or organization. We assist you in making your ideas a reality.",
       icon: (
         <BsGlobe2
           size={60}
@@ -40,7 +40,7 @@ const Home: NextPage = () => {
     },
     {
       title: "Mobile App Development",
-      desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque minima exercitationem repellendus fuga quam laboriosam hic aut harum veniam aliquid.",
+      desc: "We'll help you choose the best option for your project, from pure native to cross-platform.",
       icon: (
         <IoPhonePortraitOutline
           size={60}
@@ -50,7 +50,7 @@ const Home: NextPage = () => {
     },
     {
       title: "Desktop App Development",
-      desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque minima exercitationem repellendus fuga quam laboriosam hic aut harum veniam aliquid.",
+      desc: "We design and develop Enterprise Desktop apps that are fast, responsive, comprehensive, and user-friendly.",
       icon: (
         <BsLaptop
           size={60}
@@ -62,32 +62,32 @@ const Home: NextPage = () => {
   const processes = [
     {
       title: "Research",
-      desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque minima exercitationem repellendus fuga quam laboriosam hic aut harum veniam aliquid.",
+      desc: "The first stage of partnership is critical. This process includes stakeholder interviews, workshops, brainstorming, insights into user needs, use cases, and prototyping.",
       icon: <BsSearch size={100} className="text-white animate-bounce" />,
     },
     {
       title: "Product Design",
-      desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque minima exercitationem repellendus fuga quam laboriosam hic aut harum veniam aliquid.",
+      desc: "We build interactive wireframes and mockups so you can see how your product will appear and work. We care about our consumers and use a human-centered approach to develop products that they will like.",
       icon: <BsFillPenFill size={60} className="text-white animate-pulse" />,
     },
     {
       title: "Implementation",
-      desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque minima exercitationem repellendus fuga quam laboriosam hic aut harum veniam aliquid.",
+      desc: "This is the most important part of the entire development process. After organizing all of the projects for short sprints, we begin engineering. We constantly employ the best technological stack for the needs of your project.",
       icon: <BsHammer size={60} className="text-white animate-bounce" />,
     },
     {
       title: "Optimisation",
-      desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque minima exercitationem repellendus fuga quam laboriosam hic aut harum veniam aliquid.",
+      desc: "Following the development phase, we must confirm that resources were spent efficiently. As a consequence, we do code reviews, reworking, and optimization. At this step, we guarantee that there are no bottlenecks in the code and that the software operates smoothly.",
       icon: <IoSettingsSharp size={60} className="text-white animate-spin" />,
     },
     {
       title: "Testing",
-      desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque minima exercitationem repellendus fuga quam laboriosam hic aut harum veniam aliquid.",
+      desc: "Before we deploy the project, we must ensure that each feature functions properly. While studying all of the user stories, our QA engineers execute manual and automated testing.",
       icon: <BiTestTube size={60} className="text-white animate-pulse" />,
     },
     {
       title: "Deployment and Monitoring",
-      desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque minima exercitationem repellendus fuga quam laboriosam hic aut harum veniam aliquid.",
+      desc: "The last stage of development. Everything we've previously built has been deployed here. Our initiative is now available to the public. We typically continue to work with you after the product has been delivered and support you at every level of your business's development.",
       icon: <IoRocketOutline size={60} className="text-white animate-bounce" />,
     },
   ];
@@ -118,9 +118,9 @@ const Home: NextPage = () => {
                 </h3>
               </Bounce>
               <p className="text-white font-thin text-xl mb-4">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
-                neque, obcaecati ratione, temporibus doloribus, expedita
-                corporis eum debitis tempora repudiandae modi!
+                We help African businesses in developing and launching online,
+                mobile application, and software projects more quickly and
+                affordably.
               </p>
               <div className="flex mb-10 md:mb-0 w-5/6">
                 <button
@@ -147,10 +147,13 @@ const Home: NextPage = () => {
               {" "}
               <Image src={about} alt="about" />
               <h4 className="md:w-2/3 md:text-2xl font-thin text-lg text-white text-center">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Commodi necessitatibus accusantium ullam placeat amet illo quos
-                vel cum ipsa, nisi repellat iste, iusto aliquam veritatis
-                fugiat, officia possimus nobis optio.
+                Athenasoft Technology is a forward-thinking and formidable IT
+                company. Whatever you want to build, whether you are just
+                starting out and searching for a web presence or you have
+                decided to conduct your whole company process online, we
+                understand how significant your decision is, and we already have
+                the professionals and the technology to deliver your project
+                above expectations.
               </h4>
             </div>
           </Zoom>
