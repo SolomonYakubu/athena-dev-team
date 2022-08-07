@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 
 import { RiMenu4Line } from "react-icons/ri";
 import { AiOutlineClose } from "react-icons/ai";
-import { GiWoodAxe } from "react-icons/gi";
+
 import { Link, animateScroll as scroll } from "react-scroll";
 import logo from "../public/athena.png";
 import Image from "next/image";
@@ -12,10 +12,11 @@ export default function Header() {
 
   const [home, setHome] = useState(true);
   const list = [
-    ["Home", "/", true],
-    ["About", "/about", false],
+    ["Home", null],
+    ["About", null],
 
-    ["FAQs", "/faqs", false],
+    ["Services", null],
+    ["Process", null],
   ];
 
   const sessionList = [
@@ -44,10 +45,10 @@ export default function Header() {
           {" "}
           {list.map(([name, link], index) => (
             <Link
-              className="m-2 text-gray-50  cursor-pointer hover:text-blue-400"
+              className="m-2 text-gray-50 font-bold text-xl cursor-pointer hover:text-blue-400"
               key={index}
               activeClass="active"
-              to={"Home"}
+              to={`${name}`}
               spy={true}
               smooth={true}
               offset={-70}
@@ -68,8 +69,8 @@ export default function Header() {
         </button>
       </div>
       <div
-        className={`md:hidden overflow-hidden w-screen py-5 p-2 flex flex-col bg-gray-800  items-start justify-center transition-max-height ease-out duration-500 ${
-          (isNavOpen && " max-h-96") || "max-h-0 py-0 p-0"
+        className={`md:hidden overflow-hidden w-full py-5 p-2 flex flex-col bg-[#1f1f1f] shadow-lg  items-start justify-center transition-max-height ease-out duration-500 ${
+          (isNavOpen && " max-h-96") || "max-h-0 py-0"
         }`}
       >
         <ul className="flex flex-col">
@@ -77,11 +78,11 @@ export default function Header() {
             ([name, link], index) =>
               (home && (
                 <Link
-                  className={`mt-2 pl-2 text-gray-50 m-1 font-light text-xl hover:scale-105`}
+                  className={`mt-2 pl-2 text-gray-50 m-1 font-bold  text-2xl hover:scale-105`}
                   key={index}
                   onClick={() => setNavOpen(false)}
-                  activeClass="mobile-active"
-                  to={"Home"}
+                  activeClass="active"
+                  to={`${name}`}
                   spy={true}
                   smooth={true}
                   offset={-70}

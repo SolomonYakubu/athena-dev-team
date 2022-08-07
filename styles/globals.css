@@ -9,11 +9,12 @@ body {
   font-family: Poppins
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+.active {
 
+    background: linear-gradient(90deg, rgb(88, 1, 105) 0%, rgba(255, 0, 189, 1) 100%);
+    background-clip: text;
+    color: transparent;
+}
 * {
   box-sizing: border-box;
 }

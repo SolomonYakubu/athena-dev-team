@@ -154,7 +154,7 @@ const Home: NextPage = () => {
           </Zoom>
           <div className="md:flex "></div>
         </section>
-        <section className="p-6  w-full bg-[#1a1a1a]" id="About">
+        <section className="p-6  w-full bg-[#1a1a1a]" id="Services">
           <h3 className=" text-center text-4xl text-white font-extrabold mb-7">
             Services we can help you with
           </h3>
@@ -175,7 +175,7 @@ const Home: NextPage = () => {
 
         <section
           className="w-full bg-[#242424] p-3 flex flex-col items-center justify-center overflow-hidden"
-          id="FAQs"
+          id="Process"
         >
           <h3 className=" text-center text-4xl text-white font-extrabold mb-7">
             Our Process
