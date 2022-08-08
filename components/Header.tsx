@@ -6,6 +6,7 @@ import { AiOutlineClose } from "react-icons/ai";
 
 import { Link, animateScroll as scroll } from "react-scroll";
 import logo from "../public/athena.png";
+import menu from "../public/menu.svg";
 import Image from "next/image";
 export default function Header() {
   const [isNavOpen, setNavOpen] = useState(false);
@@ -69,16 +70,17 @@ export default function Header() {
         </button>
       </div>
       <div
-        className={`md:hidden overflow-hidden w-full py-5 p-2 flex flex-col bg-[#1f1f1f] shadow-lg  items-start justify-center transition-max-height ease-out duration-500 ${
+        className={`md:hidden overflow-hidden w-full py-5 p-2 flex  bg-[#1f1f1f] shadow-lg  items-end justify-center transition-max-height ease-out duration-500 ${
           (isNavOpen && " max-h-96") || "max-h-0 py-0"
         }`}
       >
+        <Image src={menu} alt="menu" />
         <ul className="flex flex-col">
           {list.map(
             ([name, link], index) =>
               (home && (
                 <Link
-                  className={`mt-2 pl-2 text-gray-50 m-1 font-bold  text-2xl hover:scale-105`}
+                  className={`mt-2 pl-2 text-gray-50 m-1 text-right pr-5 font-bold  text-2xl hover:scale-105`}
                   key={index}
                   onClick={() => setNavOpen(false)}
                   activeClass="active"
